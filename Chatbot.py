@@ -12,7 +12,7 @@ WHATSAPP_LINK = "https://wa.me/923495614170"
 
 # ---------------- Text Cleaning ----------------
 def clean_text(text):
-    text = text.lower()
+    text = str(text).lower()
     text = re.sub(r"[^\w\s]", "", text)
     text = re.sub(r"\s+", " ", text)
     return text.strip()
@@ -51,24 +51,25 @@ def get_answer(user_question):
         question_embeddings
     )
 
-    best_index = np.argmax(similarity_scores)
+    best_index = int(np.argmax(similarity_scores))
 
-    best_score = similarity_scores[0][best_index]
+    # Convert NumPy float32 to normal Python float
+    best_score = float(similarity_scores[0][best_index])
 
     if best_score >= THRESHOLD:
 
         return {
-            "answer": df.iloc[best_index]["Answer"],
-            "matched_question": df.iloc[best_index]["Question"],
-            "confidence": round(best_score * 100,2)
+            "answer": str(df.iloc[best_index]["Answer"]),
+            "matched_question": str(df.iloc[best_index]["Question"]),
+            "confidence": round(best_score * 100, 2)
         }
 
     else:
 
         return {
-            "answer":"Sorry, I couldn't find a suitable answer.\nFor further help contact SafeX Solutions:\nhttps://wa.me/923495614170",
-            "matched_question":None,
-            "confidence":round(best_score*100,2)
+            "answer": "Sorry, I couldn't find a suitable answer.\nFor further help contact SafeX Solutions:\nhttps://wa.me/923495614170",
+            "matched_question": None,
+            "confidence": round(best_score * 100, 2)
         }
 
 
@@ -77,14 +78,14 @@ if __name__ == "__main__":
 
     while True:
 
-        user_question=input("You : ")
+        user_question = input("You : ")
 
-        if user_question.lower() in ["exit","quit"]:
-         break
+        if user_question.lower() in ["exit", "quit"]:
+            break
 
-        result=get_answer(user_question)
+        result = get_answer(user_question)
 
-        print("\nBot :",result["answer"])
-        print("Matched Question :",result["matched_question"])
-        print("Confidence :",result["confidence"],"%")
+        print("\nBot :", result["answer"])
+        print("Matched Question :", result["matched_question"])
+        print("Confidence :", result["confidence"], "%")
         
