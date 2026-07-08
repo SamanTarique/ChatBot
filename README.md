@@ -144,13 +144,13 @@ The chatbot achieved high semantic matching accuracy even when tested with natur
 
 ### Railway Deployment
 
-![Railway-Deployment](images/railway-deployment.png)
+![Railway-Deployment](images/Railway-Deployment.png)
 
 ---
 
 ### Chat Response
 
-![Chat-Response](images/chat-response.png)
+![Chat-Response](images/Chat-Response.png)
 
 ---
 
