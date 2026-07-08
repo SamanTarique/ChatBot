@@ -134,12 +134,11 @@ The chatbot achieved high semantic matching accuracy even when tested with natur
 
 ---
 
-## 📷 Screenshots
 
 
 ### Chatbot Interface
 
-![Chatbot-Interface](images/chatbot-interface.png)
+![Chatbot-Interface](images/Chatbot-Interface.png)
 
 ---
 
