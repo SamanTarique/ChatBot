@@ -5,7 +5,7 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
-CSV_PATH = "task1Portfolio/FAQ_(1).csv"
+CSV_PATH = "FAQ_(1).csv"
 MODEL_NAME = "all-MiniLM-L6-v2"
 THRESHOLD = 0.40
 SAMPLE_SIZE = 300
