@@ -1,13 +1,7 @@
 # SafeX FAQ Chatbot :
 
 
-An AI-powered FAQ chatbot developed for **SafeX Solutions** using **Sentence Transformers**, **Flask**, and **Semantic Search**. The chatbot understands the meaning of user queries and retrieves the most relevant answer from a large FAQ dataset instead of relying on exact keyword matching.
-
----
-
-##  Project Overview
-
-The SafeX FAQ Chatbot was built as an AI/ML prototype to automate customer support by answering frequently asked questions. It uses Natural Language Processing (NLP) to compare the semantic similarity between the user's question and the stored FAQs.
+An AI-powered FAQ chatbot developed for **SafeX Solutions** using **Sentence Transformers**, **Flask**, and **Semantic Search**. The chatbot understands the meaning of user queries and retrieves the most relevant answers from the FAQ database.
 
 Unlike traditional keyword-based chatbots, this system can understand paraphrased questions and return accurate responses.
 
@@ -24,6 +18,12 @@ Unlike traditional keyword-based chatbots, this system can understand paraphrase
 - REST API built with Flask
 - Railway deployment
 - Lovable frontend integration
+
+---
+
+##  🚀 Live Demo
+
+Try the chatbot live here: **[SafeX FAQ Chatbot](https://safex-chatbot.lovable.app)**
 
 ---
 
@@ -169,6 +169,5 @@ The chatbot achieved high semantic matching accuracy even when tested with natur
 ##  Author
 
 **Saman Tariq**
-
 
 
